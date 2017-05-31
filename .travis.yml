@@ -1,16 +1,26 @@
 language: php
 
 php:
-    - 5.5
     - 5.6
     - 7.0
     - 7.1
     
 sudo: false
 
-before_script:
+before_install:
+    # execute all of the commands which need to be executed 
+    # before installing dependencies
+
+install:
+    # install all of the dependencies we need here
     - composer install --prefer-dist --dev
 
+before_script:
+    # execute all of the commands which need to be executed 
+    # before running actual tests
+
 script:
+    # execute all of the test or other commands to determine
+    # whether the build will pass or fail
     - phpunit test-runner.php .
 
