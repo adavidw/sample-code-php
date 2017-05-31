@@ -20,7 +20,7 @@ before_script:
     # before running actual tests
 
 script:
-    # execute all of the test or other commands to determine
+    # execute all of the tests or other commands to determine
     # whether the build will pass or fail
     - phpunit test-runner.php .
 
