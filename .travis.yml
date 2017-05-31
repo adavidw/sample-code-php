@@ -27,6 +27,8 @@ script:
     - ls vendor
     - ls vendor/phpunit
     - ls vendor/phpunit/phpunit
-    - vendor/phpunit/phpunit --version
+    - vendor/phpunit/phpunit/phpunit --version
     - phpunit test-runner.php .
 
+notifications:
+  email: false
