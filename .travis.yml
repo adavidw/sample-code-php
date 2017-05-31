@@ -10,6 +10,10 @@ sudo: false
 before_install:
     # execute all of the commands which need to be executed 
     # before installing dependencies
+  - source .travis/xdebug.sh
+  - xdebug-disable
+  - composer validate
+
 
 install:
     # install all of the dependencies we need here
@@ -22,13 +26,6 @@ before_script:
 script:
     # execute all of the tests or other commands to determine
     # whether the build will pass or fail
-    - phpunit --version
-    - ls
-    - ls vendor
-    - ls vendor/phpunit
-    - ls vendor/phpunit/phpunit
-    - vendor/phpunit/phpunit/phpunit --version
-    - which phpunit
     - vendor/phpunit/phpunit/phpunit test-runner.php .
 
 notifications:
