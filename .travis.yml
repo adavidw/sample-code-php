@@ -12,7 +12,7 @@ before_install:
     # before installing dependencies
 #  - source .travis/xdebug.sh
 #  - xdebug-disable
-  - composer validate
+#  - composer validate
 
 
 install:
